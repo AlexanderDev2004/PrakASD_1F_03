@@ -8,13 +8,13 @@ public class P3_Percobaan3_1F_03 {
 
         // Deklarasi array 2D untuk menyimpan data mata kuliah
         String[][] matakuliah = {
-            {"Pancasila", "3", "0", "0", "0", "0"},
-            {"Konsep Teknologi Informasi", "3", "0", "0", "0", "0"},
-            {"Critical Thinking dan Problem Solving", "3", "0", "0", "0", "0"},
+            {"Pancasila", "2", "0", "0", "0", "0"},
+            {"Konsep Teknologi Informasi", "2", "0", "0", "0", "0"},
+            {"Critical Thinking dan Problem Solving", "2", "0", "0", "0", "0"},
             {"Matematika Dasar", "3", "0", "0", "0", "0"},
-            {"Bahasa Inggris", "3", "0", "0", "0", "0"},
-            {"Dasar Pemrograman", "3", "0", "0", "0", "0"},
-            {"Praktikum Dasar Pemrograman", "1", "0", "0", "0", "0"},
+            {"Bahasa Inggris", "2", "0", "0", "0", "0"},
+            {"Dasar Pemrograman", "2", "0", "0", "0", "0"},
+            {"Praktikum Dasar Pemrograman", "3", "0", "0", "0", "0"},
             {"Keselamatan dan Kesehatan Kerja", "2", "0", "0", "0", "0"}
         };
 
