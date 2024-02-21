@@ -7,6 +7,7 @@ public class P1_Percobaan1_1F_03 {
         System.out.println("Program Menghitung nilai Akhir");
         System.out.println("============================");
         System.out.println();
+
         // Memberikan Input yg nanti di sediakan
         System.out.println("Masukkan nilai tugas : ");
         int tugas = Integer.parseInt(sc.nextLine());
@@ -16,7 +17,7 @@ public class P1_Percobaan1_1F_03 {
         int UTS = Integer.parseInt(sc.nextLine());
         System.out.println("Masukkan nilai UAS : ");
         int UAS = Integer.parseInt(sc.nextLine());
-
+        // Memberikan kondisi
         if (tugas < 0 || tugas > 100 || kuis < 0 || kuis > 100 || UTS < 0 || UTS > 100 || UAS < 0 || UAS > 100) {
             System.out.println("Nilai tidak valid");
         } else {
