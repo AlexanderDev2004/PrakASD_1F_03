@@ -33,5 +33,8 @@ public class Bukumain03 {
         Buku03 bukuAlex = new Buku03("Belajar Java bersama Alex","Alexander", 500, 30,500000 );
         bukuAlex.terjual(20);
         bukuAlex.tampilInformasi();
+        System.out.println("Diskon yang diberikan: " + (bukuAlex.hitungdiskon(bukuAlex.hitunghargatotal(4)) * 100) + "%");
+        System.out.println("Total harga setelah diskon : " + bukuAlex.hitunghargabayar(1));
+        System.out.println("Total harga setelah diskon : " + bukuAlex.hitunghargabayar(2));
     }
 }
