@@ -2,14 +2,14 @@ package P2.systembuku;
 
 public class Buku03 {
     String judul, pengarang;
-    String halaman, stock, harga;
+    int halaman, stock, harga;
 
     // Default Constructor
     public Buku03() {
     }
 
     // Constructor with parameters
-    public Buku03(String judul, String pengarang, String halaman, String stock, String harga) {
+    public Buku03(String judul, String pengarang, int halaman, int stock, int harga) {
         this.judul = judul;
         this.pengarang = pengarang;
         this.halaman = halaman;
@@ -21,15 +21,13 @@ public class Buku03 {
         System.out.println("Judul: " + judul);
         System.out.println("Pengarang: " + pengarang);
         System.out.println("Isi Halaman: " + halaman);
-        System.out.println("Stok Buku: " + (stock.equals("0") ? "0" : stock));
+        System.out.println("Stok Buku: " + (stock == 0 ? "0" : stock));
         System.out.println("Harga Buku: " + harga);
     }
 
     void terjual(int jml) {
-        int stockInt = Integer.parseInt(stock);
-        if (stockInt >= jml) {
-            stockInt -= jml;
-            stock = String.valueOf(stockInt);
+        if (stock >= jml) {
+            stock -= jml;
             System.out.println(jml + " buku telah terjual.");
         } else {
             System.out.println("Stok tidak mencukupi untuk penjualan.");
@@ -37,14 +35,33 @@ public class Buku03 {
     }
 
     void restok(int jml) {
-        int stockInt = Integer.parseInt(stock);
-        stockInt += jml;
-        stock = String.valueOf(stockInt);
+        stock += jml;
         System.out.println(jml + " buku telah ditambahkan ke dalam stok.");
     }
 
     void gantiharga(int hrg) {
-        harga = String.valueOf(hrg);
+        harga = hrg;
         System.out.println("Harga buku telah diubah menjadi " + hrg);
+    }
+
+    int hitungHargaTotal() {
+        return harga * stock;
+    }
+
+    double hitungDiskon() {
+        int hargaTotal = hitungHargaTotal();
+        double diskon = 0.0;
+        if (hargaTotal > 150000) {
+            diskon = 0.12; // Diskon 12%
+        } else if (hargaTotal >= 75000) {
+            diskon = 0.05; // Diskon 5%
+        }
+        return diskon;
+    }
+
+    double hitungHargaBayar(int hargaTotal4, double diskonbuku) {
+        int hargaTotal = hitungHargaTotal();
+        double diskon = hitungDiskon();
+        return hargaTotal * (1 - diskon);
     }
 }
