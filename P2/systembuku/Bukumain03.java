@@ -14,16 +14,20 @@ public class Bukumain03 {
         bk1.gantiharga(6000);
         bk1.tampilInformasi();
 
-        Buku03 bk2 = new Buku03();
-        bk2.judul = " How to Train Your Dragon";
-        bk2.pengarang ="Alexander Agung raya";
-        bk2.halaman = 444;
-        bk2.stok = 0;
-        bk2.harga = 275000;
+        // Buku03 bk2 = new Buku03();
+        // bk2.judul = " How to Train Your Dragon";
+        // bk2.pengarang ="Alexander Agung raya";
+        // bk2.halaman = 444;
+        // bk2.stok = 0;
+        // bk2.harga = 275000;
 
-        bk2.tampilInformasi();
-        bk2.terjual(4);
-        bk2.gantiharga(6000);
+        // bk2.tampilInformasi();
+        // bk2.terjual(4);
+        // bk2.gantiharga(6000);
+        // bk2.tampilInformasi();
+
+        Buku03 bk2 = new Buku03("Bulan purnama","Alexander Agung", 160, 29,50000 );
+        bk2.terjual(11);
         bk2.tampilInformasi();
     }
 }
