@@ -46,5 +46,6 @@ public class Bukumain03 {
         System.out.println("Harga Total: " + hargaTotal4);
         System.out.println("Diskon: " + (diskonbuku * 100) + "%");
         System.out.println("Harga Setelah Diskon: " + hargaBayar4);
+        System.out.println();
     }
 }
