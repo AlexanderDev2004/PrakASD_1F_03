@@ -14,6 +14,23 @@ public class Bukumain03 {
         bk1.gantiharga(60000);
         bk1.tampilinformasi();
 
+        bk1.terjual(5);
+        bk1.gantiharga(60000);
+        bk1.tampilinformasi();
+
+        // System.out.println();
+        // Buku03 bk2 = new Buku03(); 
+        // bk2.judul = "How To Train Your Dragon"; 
+        // bk2.pengarang = "Alexander"; 
+        // bk2.halaman = "490"; 
+        // bk2.stock = "0"; 
+        // bk2.harga = "275000"; 
+
+        // bk2.tampilinformasi();
+        // bk2.terjual(4);
+        // bk2.gantiharga(60000);
+        // bk2.tampilinformasi();
+
         System.out.println();
         Buku03 bk2 = new Buku03("Self Rewand", "Alexander", "190", "29", "59000"); 
         bk2.terjual(11);
