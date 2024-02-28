@@ -40,4 +40,23 @@ public class Buku03 {
     void gantiharga (int hrg) {
         harga += hrg;
     }
+
+    int hitunghargatotal(int Jumlahterjual) {
+        return harga * Jumlahterjual;
+    }
+    double hitungdiskon(int hargaTotal) {
+        if (hargaTotal > 150000) {
+            return 0.12;
+        } else if (hargaTotal >= 75000 && hargaTotal <= 150000) {
+            return 0.5;
+        } else {
+            return 0.0;
+        }
+    }
+
+    double hitunghargabayar(int Jumlahterjual) {
+        int hargaTotal = hitunghargatotal(Jumlahterjual);
+        double diskon = hitungdiskon(hargaTotal);
+        return hargaTotal - (hargaTotal * diskon);
+    }
 }
