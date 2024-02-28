@@ -59,9 +59,11 @@ public class Buku03 {
         return diskon;
     }
 
+    
     double hitungHargaBayar(int hargaTotal4, double diskonbuku) {
         int hargaTotal = hitungHargaTotal();
         double diskon = hitungDiskon();
         return hargaTotal * (1 - diskon);
+        
     }
 }
