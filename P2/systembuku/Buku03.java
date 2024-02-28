@@ -13,7 +13,14 @@ public class Buku03 {
     }
 
     void terjual (int jml) {
-        stok -= jml;
+        if (stok > 0) {
+            stok -= jml;
+        }
+        if (stok < 0 ) {
+            stok = 0;
+        } else {
+            System.out.println("Stok habis bang/mbak");
+        }
     }
     void restock (int jml) {
         stok += jml;
