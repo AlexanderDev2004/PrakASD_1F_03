@@ -29,5 +29,9 @@ public class Bukumain03 {
         Buku03 bk2 = new Buku03("Bulan purnama","Alexander Agung", 160, 29,50000 );
         bk2.terjual(11);
         bk2.tampilInformasi();
+
+        Buku03 bukuAlex = new Buku03("Belajar Java bersama Alex","Alexander", 500, 30,500000 );
+        bukuAlex.terjual(20);
+        bukuAlex.tampilInformasi();
     }
 }
