@@ -2,8 +2,20 @@ package P2.systembuku;
 
 public class Buku03 {
     String judul, pengarang;
-    String halaman, stock,harga ;
-  
+    String halaman, stock, harga;
+
+    // Default Constructor
+    public Buku03() {
+    }
+
+    // Constructor with parameters
+    public Buku03(String judul, String pengarang, String halaman, String stock, String harga) {
+        this.judul = judul;
+        this.pengarang = pengarang;
+        this.halaman = halaman;
+        this.stock = stock;
+        this.harga = harga;
+    }
 
     void tampilinformasi() {
         System.out.println("Judul: " + judul);
