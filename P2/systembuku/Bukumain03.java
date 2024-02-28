@@ -35,5 +35,10 @@ public class Bukumain03 {
         Buku03 bk2 = new Buku03("Self Rewand", "Alexander", "190", "29", "59000"); 
         bk2.terjual(11);
         bk2.tampilinformasi();
+
+        System.out.println();
+        Buku03 bukuAlexander = new Buku03("Joko terkubur", "Alexander", "200", "0", "5000"); 
+        bukuAlexander.terjual(4);
+        bukuAlexander.tampilinformasi();
     }
 }
