@@ -18,5 +18,6 @@ public class Nagamain03 {
         
         
         kadalterbang.moveLeft(); 
+        System.out.println("Game Selesai");
     }
 }
