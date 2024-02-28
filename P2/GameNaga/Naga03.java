@@ -46,6 +46,6 @@ public class Naga03 {
     }
 
     private void detectCollision() {
-        System.out.println("HA-HA-HA....Game Over");
+        System.out.println("HA-HA-HA Kasihan....Game Over");
     }
 }
