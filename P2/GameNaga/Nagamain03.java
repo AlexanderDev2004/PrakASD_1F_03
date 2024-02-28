@@ -2,21 +2,21 @@ package P2.GameNaga;
 
 public class Nagamain03 {
     public static void main(String[] args) {
-        Naga03 dragon = new Naga03();
+        Naga03 kadalterbang = new Naga03();
         
-        dragon.moveLeft();
-        dragon.printPosition(); 
+        kadalterbang.moveLeft();
+        kadalterbang.printPosition(); 
         
-        dragon.moveUp();
-        dragon.printPosition(); 
+        kadalterbang.moveUp();
+        kadalterbang.printPosition(); 
         
-        dragon.moveRight();
-        dragon.printPosition(); 
+        kadalterbang.moveRight();
+        kadalterbang.printPosition(); 
         
-        dragon.moveDown();
-        dragon.printPosition(); 
+        kadalterbang.moveDown();
+        kadalterbang.printPosition(); 
         
         
-        dragon.moveLeft(); 
+        kadalterbang.moveLeft(); 
     }
 }
