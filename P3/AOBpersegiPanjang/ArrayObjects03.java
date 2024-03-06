@@ -35,7 +35,7 @@ public class ArrayObjects03 {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                pparry[i][j] = new PersegiPanjang03();
+                pparry[i][j] = new PersegiPanjang03(j,j);
                 System.out.println("Persegi panjang ke- " + i + ", " + j);
                 System.out.println("Masukan panjang :");
                 pparry[i][j].panjang = sc.nextInt();
