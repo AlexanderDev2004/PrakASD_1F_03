@@ -3,6 +3,11 @@ package P5;
 public class Pangkat03 {
     public int nilai,pangkat;
 
+    Pangkat03(int nilai, int pangkat) {
+        this.nilai = nilai;
+        this.pangkat = pangkat;
+    }
+
     int PangkatBF(int a, int n) {
         int Hasil = 1;
         for (int i = 0; i < n; i++) {
@@ -10,6 +15,7 @@ public class Pangkat03 {
         }
         return Hasil;
     }
+
     int pangkatDC(int a, int n) {
         if (n == 1) {
             return a;
