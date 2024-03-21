@@ -1,4 +1,4 @@
-package P5;
+package P5.Pangkat03;
 
 public class Pangkat03 {
     public int nilai,pangkat;

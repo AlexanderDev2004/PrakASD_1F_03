@@ -1,5 +1,7 @@
-package P5;
+package P5.Pangkat03;
 import java.util.Scanner;
+
+
 public class MainPangkat03 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

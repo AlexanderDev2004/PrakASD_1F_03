@@ -1,4 +1,4 @@
-package P5;
+package P5.Sum03;
 
 public class Sum03 {
     int elemen;

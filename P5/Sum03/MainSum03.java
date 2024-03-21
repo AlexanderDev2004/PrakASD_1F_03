@@ -1,6 +1,6 @@
-package P5;
-
+package P5.Sum03;
 import java.util.Scanner;
+
 
 public class MainSum03 {
     public static void main(String[] args) {
