@@ -1,4 +1,4 @@
-package P6;
+package P6.BUKU03;
 
 public class DaftarBuku03 {
     Buku03 listBK[] = new Buku03[5];
@@ -40,6 +40,17 @@ public class DaftarBuku03 {
             Buku03 tempBuku03 = listBK[idMix];
             listBK[idMix] = listBK[i];
             listBK[i] = tempBuku03;
+        }
+    }
+    void insertionSort() {
+        for (int i = 1; i < listBK.length; i++) {
+            Buku03 temp = listBK[i];
+            int j = i;
+            while (j > 0 && listBK[j-1].stock > temp.stock) {
+                listBK[j] = listBK[j-1];
+                j--;
+            }
+            listBK[j] = temp;
         }
     }
     

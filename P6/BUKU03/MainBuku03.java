@@ -1,4 +1,4 @@
-package P6;
+package P6.BUKU03;
 
 public class MainBuku03 {
     public static void main(String[] args) {
@@ -26,6 +26,11 @@ public class MainBuku03 {
         System.out.println("====================");
         System.out.println("Data setelah diurutkan secara Desc berdasarkan Stock menggunakan selection short");
         listBuku03.selectionSort();
+        listBuku03.tampil();
+
+        System.out.println("====================");
+        System.out.println("Data setelah diurutkan secara ASC berdasarkan Stock menggunakan Insertion short");
+        listBuku03.insertionSort();
         listBuku03.tampil();
     }
 }

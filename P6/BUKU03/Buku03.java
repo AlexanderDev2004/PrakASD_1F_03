@@ -1,4 +1,4 @@
-package P6;
+package P6.BUKU03;
 
 public class Buku03 {
     int KodeBuku ;
