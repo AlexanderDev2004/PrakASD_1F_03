@@ -28,5 +28,19 @@ public class DaftarBuku03 {
             }
         }
     }
+    void selectionSort() {
+        for (int i = 0; i < listBK.length -1 ; i++) {
+            int  idMix = 1;
+            for (int j = i+1; j < listBK.length; j++) {
+                if (listBK[j].stock > listBK[idMix].stock ) {
+                    idMix = i;
+                }
+            }
+            // Swap
+            Buku03 tempBuku03 = listBK[idMix];
+            listBK[idMix] = listBK[i];
+            listBK[i] = tempBuku03;
+        }
+    }
     
 }

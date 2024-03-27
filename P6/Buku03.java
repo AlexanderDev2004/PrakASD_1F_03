@@ -20,6 +20,6 @@ public class Buku03 {
         System.out.println("Judul Buku : "+ judulBuku);
         System.out.println("Tahun Terbit  : "+ tahunTerbit);
         System.out.println("Pengaran  : "+ pengaran);
-        System.out.println("Stock : "+ pengaran);
+        System.out.println("Stock : "+ stock);
     }
 }
