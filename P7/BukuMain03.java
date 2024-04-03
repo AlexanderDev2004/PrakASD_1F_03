@@ -43,6 +43,8 @@ public class BukuMain03 {
         int posisi = data.FindSeqSearch(cari);
         data.Tampilpoisisi(cari, posisi);
         
-        
+        Buku03 databBuku03 = data.FindBuku(cari);
+        databBuku03.TampilDataBuku();
+        data.Tampilpoisisi(cari, posisi);
     }
 }

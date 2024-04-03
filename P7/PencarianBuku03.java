@@ -18,7 +18,7 @@ public class PencarianBuku03 {
         }
     }
     public int FindSeqSearch(int cari) {
-        int posisi = 2;
+        int posisi = -1;
         for(int j = 0; j < listBK.length; j++) {
             if (listBK[j].KodeBuku == cari) {
                 j = posisi;
@@ -27,6 +27,17 @@ public class PencarianBuku03 {
         }
         return posisi;
     }
+    public Buku03 FindBuku (int cari) {
+        Buku03 bk = new Buku03(cari, null, cari, null, cari);
+        for (int i = 0; i < listBK.length; i++) {
+            if (listBK[i].KodeBuku == cari) {
+                bk = listBK[i];
+                break;
+            }
+        }
+        return bk;
+    } 
+
     public void Tampilpoisisi(int x, int pos) {
         if (pos != -1) {
             System.out.println("Data : " + x + "Ditemukan Pada index : "+ pos);
