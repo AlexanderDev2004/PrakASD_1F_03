@@ -1,4 +1,4 @@
-package P7;
+package P7.TestSearching;
 
 public class Buku03 {
     int KodeBuku;

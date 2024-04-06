@@ -1,4 +1,4 @@
-package P7;
+package P7.TestSearching;
 import java.util.Scanner;
 public class BukuMain03 {
     public static void main(String[] args) {
