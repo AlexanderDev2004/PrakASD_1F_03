@@ -46,20 +46,20 @@ public class PencarianBuku03 {
         }
     }
     public int FindBinarySearch(int cari, int left, int right) {
-        int mid;
         if (right >= left) {
-            mid = (right) /2;
-            if (cari == listBK[mid].KodeBuku) {
+            int mid = left + (right - left) / 2;
+            if (listBK[mid].KodeBuku == cari) {
                 return mid;
-            } else if (listBK[mid].KodeBuku > cari) {
-                return FindBinarySearch(cari, left,mid-1);
-            } else {
-                return FindBinarySearch(cari, mid +1, right);
             }
-        } 
+            if (listBK[mid].KodeBuku > cari) {
+                return FindBinarySearch(cari, left, mid - 1);
+            } else {
+                return FindBinarySearch(cari, mid + 1, right);
+            }
+        }
         return -1;
-        
     }
+    
    
 	
 }
