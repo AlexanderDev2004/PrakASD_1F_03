@@ -47,11 +47,12 @@ public class BukuMain03 {
         databBuku03.TampilDataBuku();
         data.Tampilpoisisi(cari, posisi);
 
+        System.out.println();
         System.out.println("================================");
         System.out.println("Menggunakan Binary Searcing");
         posisi = data.FindBinarySearch(cari, 0, jmlbuku-1);
         data.Tampilpoisisi(cari, posisi);
-
+        databBuku03.TampilDataBuku();
         
     }
 }
