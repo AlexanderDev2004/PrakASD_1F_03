@@ -1,4 +1,4 @@
-package P7.MergeSortTest;
+package P7.MergeSortTest03;
 
 public class MergeSorting03 {
   public void MergeSort(int[] data) {
