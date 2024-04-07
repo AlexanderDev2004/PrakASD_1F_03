@@ -60,6 +60,39 @@ public class PencarianBuku03 {
         return -1;
     }
     
+    public int FindJudulSeqSearcing(String CariJudul) {
+        int JudulDD = 0;
+        for (int j = 0 ; j < listBK.length; j++) {
+            if (CariJudul.equalsIgnoreCase(listBK[j].JudulBuku)) {
+                JudulDD ++ ;
+                if (JudulDD >= 1) {
+                    System.out.println("Data Judul Buku" + CariJudul + ":");
+                }
+                listBK[j].TampilDataBuku();
+            }
+        }
+        return JudulDD;
+
+    }
+    public int FindJudulBinarySearcing(String CariJudul, int left, int right) {
+        int mid;
+        if (right >= left) {
+            mid = (left + right)/2 ;
+            int result = listBK[mid].JudulBuku.compareToIgnoreCase(CariJudul);
+            if (result == 0) {
+                result (mid);
+            } else if (result < 0) {
+                return FindJudulBinarySearcing(CariJudul, left, mid -1);
+            } else {
+                return FindJudulBinarySearcing(CariJudul, mid +1, right);
+            }
+        }
+        return -1;
+    }
+    private void result(int mid) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'result'");
+    }
    
 	
 }

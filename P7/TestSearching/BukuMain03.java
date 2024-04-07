@@ -54,5 +54,25 @@ public class BukuMain03 {
         data.Tampilpoisisi(cari, posisi);
         databBuku03.TampilDataBuku();
         
+        System.out.println("=======================");
+        System.out.println("Cari Data Buku yg di cari :");
+        String CariJudul =s1.nextLine();
+
+        System.out.println("=================================");
+        System.out.println("Pencarian Judul Buku metode Sequential Reseacing");
+        int JudulDD = data.FindJudulSeqSearcing(CariJudul);
+        if (JudulDD > 1) {
+            System.out.println("Judul Buku lebih dari 1 hasil dengan judul :" + CariJudul);
+        }
+        System.out.println("==================================");
+        System.out.println("Pencarian Judul buku metode Binary reascing ");
+
+        int posisiBil = data.FindJudulBinarySearcing(CariJudul, 0, jmlbuku-1);
+        if (posisiBil == -1) {
+            System.out.println("Judul Buku : " + CariJudul + "Di temukan" );
+            data.listBK[posisiBil].TampilDataBuku();
+        } else {
+            System.out.println("Judul Buku : " + CariJudul + "Tidak temukan Silahkan Cari lagi" );
+        }
     }
 }
