@@ -69,9 +69,22 @@ public class Gudang03 {
             System.out.println("Tumpukan Barang Kosong");
         }
     }
+    // public String KonversiDesimalKeBiner(int kode) {
+    //     StackKonversi stack = new StackKonversi(kode);
+    //     while (kode > 0) {
+    //         int sisa = kode % 2;
+    //         stack.push(sisa);
+    //         kode = kode / 2;
+    //     }
+    //     StringBuilder biner = new StringBuilder();
+    //     while (!stack.CekKosong()) {
+    //         biner.append(stack.pop());
+    //     }
+    //     return biner.toString(); 
+    // }
     public String KonversiDesimalKeBiner(int kode) {
         StackKonversi stack = new StackKonversi(kode);
-        while (kode > 0) {
+        while (kode != 0) {
             int sisa = kode % 2;
             stack.push(sisa);
             kode = kode / 2;
@@ -81,7 +94,5 @@ public class Gudang03 {
             biner.append(stack.pop());
         }
         return biner.toString(); 
-    }
-    
-    
+    }    
 } 
