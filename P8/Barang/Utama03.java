@@ -11,7 +11,9 @@ public class Utama03 {
             System.out.println("2. Ambil Barang ");
             System.out.println("3. Tampilkan Tumpukan Barang ");
             System.out.println("4. Tampilkan Barang Teratas ");
-            System.out.println("5. EXIT ");
+            System.out.println("5. Tampilkan Barang Terbawah ");
+            System.out.println("6. Cari Barang ");
+            System.out.println("7. EXIT ");
             System.out.print("Pilihlah menu :");
             int pilih = sc.nextInt();
             sc.nextLine();
@@ -37,6 +39,22 @@ public class Utama03 {
                     Gudang.LihatBarangTeratas();
                     break;
                 case 5:
+                    Gudang.LihatBarangTerbawah();
+                    break;
+                case 6:
+                   System.out.print("Masukan Nama Barang : ");
+                   String NamaBarang = sc.nextLine();
+                   Barang03 Barang = Gudang.CariBarang(NamaBarang);
+                   if (Barang == null) {
+                       System.out.println("Barang Tidak Ditemukan");
+                   } else {
+                       System.out.println("Barang Ditemukan");
+                       System.out.println("Kode Barang : " + Barang.Kode);
+                       System.out.println("Nama Barang : " + Barang.Nama);
+                       System.out.println("Kategori : " + Barang.Kategori);
+                   }
+                   break;
+                case 7:
                     System.exit(0);
                     break;
                 default:

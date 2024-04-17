@@ -57,6 +57,32 @@ public class Gudang03 {
             return null;
         }
     }
+    public Barang03 LihatBarangTerbawah() {
+        if (!CekKosong()) {
+            Barang03 barangTerbawah = tumpukan[0];
+            System.out.println("Barang Terbawah : " + barangTerbawah.Nama);
+            return barangTerbawah;
+        } else {
+            System.out.println("Tumpukan Barang Kosong");
+            return null;
+        }
+    }
+
+    public Barang03 CariBarang(String nama) {
+        if (!CekKosong()) {
+            for (int i = Top; i >= 0; i--) {
+                if (tumpukan[i].Nama.equals(nama)) {
+                    return tumpukan[i];
+                }
+            }
+            System.out.println("Barang Tidak Ditemukan");
+            return null;
+        } else {
+            System.out.println("Tumpukan Barang Kosong");
+            return null;
+        }
+    }
+    
     
 
     public void TampilkanBarang() {
