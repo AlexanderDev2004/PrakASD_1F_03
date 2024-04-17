@@ -10,7 +10,8 @@ public class Utama03 {
             System.out.println("1. Tambah Barang");
             System.out.println("2. Ambil Barang ");
             System.out.println("3. Tampilkan Tumpukan Barang ");
-            System.out.println("4. EXIT ");
+            System.out.println("4. Tampilkan Barang Teratas ");
+            System.out.println("5. EXIT ");
             System.out.print("Pilihlah menu :");
             int pilih = sc.nextInt();
             sc.nextLine();
@@ -32,7 +33,10 @@ public class Utama03 {
                 case 3:
                     Gudang.TampilkanBarang();
                     break;
-                case 4:
+                case 4: 
+                    Gudang.LihatBarangTeratas();
+                    break;
+                case 5:
                     System.exit(0);
                     break;
                 default:
