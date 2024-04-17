@@ -70,7 +70,7 @@ public class Gudang03 {
         }
     }
     public String KonversiDesimalKeBiner(int kode) {
-        StackKonversi stack = new StackKonversi(kode);
+        StackKonversi03 stack = new StackKonversi03();
         while (kode > 0) {
             int sisa = kode % 2;
             stack.push(sisa);
