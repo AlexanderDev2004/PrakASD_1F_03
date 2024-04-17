@@ -9,12 +9,5 @@ public class Barang03 {
         this.Nama = Nama;
         this.Kategori = Kategori;
     }
-    public void TampilDataBarang (){
-        System.out.println("=========================================");
-        System.out.println("Nama Barang :");
-        System.out.println("=========================================");
-        System.out.println("Nama Barang :" + Nama);
-        System.out.println("Kode Barang :" + Kode);
-        System.out.println("Kategori Barang :" + Kategori);
-    }
+    
 }

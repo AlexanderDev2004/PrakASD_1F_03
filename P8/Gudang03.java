@@ -46,21 +46,22 @@ public class Gudang03 {
             return null;
         }
     }
-    public Barang03 LihatBarangTeratas () {
+    public Barang03 LihatBarangTeratas() {
         if (!CekKosong()) {
             Barang03 barangTeratas = tumpukan[Top];
-            System.out.println("Barang Teratas : "+barangTeratas.Nama);
+            System.out.println("Barang Teratas : " + barangTeratas.Nama);
             return barangTeratas;
         } else {
             System.out.println("Tumpukan Barang Kosong");
             return null;
         }
     }
+    
 
     public void TampilkanBarang() {
         if (!CekKosong()) {
             System.out.println("Rincian Tumpukan Barang Di gudang ");
-            for (int i = 0; i <= Top; i++) {
+            for (int i = Top; i >= 0; i--) {
                 System.out.printf("Kode %d : %s (kategori %s)\n", tumpukan[i].Kode, tumpukan[i].Nama, tumpukan[i].Kategori);
             }
         } else {
