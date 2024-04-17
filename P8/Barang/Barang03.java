@@ -1,4 +1,4 @@
-package P8;
+package P8.Barang;
 public class Barang03 {
     int Kode;
     String Nama;
