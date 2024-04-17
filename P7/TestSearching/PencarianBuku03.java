@@ -76,19 +76,25 @@ public class PencarianBuku03 {
     }
     public int FindJudulBinarySearcing(String CariJudul, int left, int right) {
         int mid;
+        int count = 0; 
         if (right >= left) {
             mid = (left + right)/2 ;
             int result = listBK[mid].JudulBuku.compareToIgnoreCase(CariJudul);
             if (result == 0) {
-                result (mid);
-            } else if (result < 0) {
-                return FindJudulBinarySearcing(CariJudul, left, mid -1);
-            } else {
-                return FindJudulBinarySearcing(CariJudul, mid +1, right);
+                count++; 
+            if (count > 1) { 
+                System.out.println("Pencarian menghasilkan lebih dari satu judul buku yang sama.");
             }
+            result (mid);
+        } else if (result < 0) {
+            return FindJudulBinarySearcing(CariJudul, left, mid -1);
+        } else {
+            return FindJudulBinarySearcing(CariJudul, mid +1, right);
         }
-        return -1;
     }
+    return -1;
+}
+
     private void result(int mid) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'result'");
