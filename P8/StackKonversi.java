@@ -1,11 +1,11 @@
 package P8;
 
-public class StackKonversi03 {
+public class StackKonversi {
     static int tumpukanBiner[] ;
     static int Size;
     static int Top;
 
-    public void StackKonversi (int Kapasitas) {
+    public StackKonversi (int Kapasitas) {
         Size = Kapasitas;
         tumpukanBiner = new int[Size];
         Top = -1;
