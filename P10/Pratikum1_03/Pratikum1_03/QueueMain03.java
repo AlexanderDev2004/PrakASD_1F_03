@@ -1,4 +1,4 @@
-package P10;
+package P10.Pratikum1_03.Pratikum1_03;
 import java.util.Scanner;
 
 public class QueueMain03 {
