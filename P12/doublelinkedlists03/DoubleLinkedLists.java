@@ -154,7 +154,7 @@ public class DoubleLinkedLists {
     }
     
     public int get(int index) throws Exception {
-        if (isEmpty() || index < 0 || index >= size) {
+        if (isEmpty()  || index >= size) {
             throw new Exception("Nilai indek di luar batas");
         }
         Node tmp = head;
