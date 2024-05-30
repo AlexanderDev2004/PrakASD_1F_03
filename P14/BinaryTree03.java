@@ -141,7 +141,16 @@ public class BinaryTree03 {
         displayLeaf(node.right);
     }
 
-    
+    public int countLeaf(Node03 node) {
+        if (node == null) {
+            return 0;
+        }
+        if (node.left == null && node.right == null) {
+            return 1;
+        }
+        return countLeaf(node.left) + countLeaf(node.right);
+    }
+
 
     Node03 getSuccessor(Node03 del) {
         Node03 Successor = del.right;
