@@ -19,4 +19,28 @@ public class BinaryTreeArray03 {
 
         }
     }
+    void add(int data) {
+        if (idxlast + 1 < this.data.length) {
+          idxlast++;
+          this.data[idxlast] = data;
+        } else {
+          System.out.println("The tree is full. Cannot add more elements.");
+        }
+      }
+    
+      void traversePreOrder(int idxStart) {
+        if (idxStart <= idxlast) {
+          System.out.print(this.data[idxStart] + " ");
+          traversePreOrder(2 * idxStart + 1);
+          traversePreOrder(2 * idxStart + 2);
+        }
+      }
+    
+      void traversePostOrder(int idxStart) {
+        if (idxStart <= idxlast) {
+          traversePostOrder(2 * idxStart + 1);
+          traversePostOrder(2 * idxStart + 2);
+          System.out.print(this.data[idxStart] + " ");
+        }
+      }
 }

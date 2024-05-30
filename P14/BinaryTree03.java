@@ -37,8 +37,6 @@ public class BinaryTree03 {
             }
         }
     }
-
-
     public void addRecursive(int data) {
         root = addRecursive(root, data);
     }
