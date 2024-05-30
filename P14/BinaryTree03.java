@@ -129,6 +129,20 @@ public class BinaryTree03 {
         }
     }
 
+    
+    public void displayLeaf(Node03 node) {
+        if (node == null) {
+            return;
+        }
+        if (node.left == null && node.right == null) {
+            System.out.println(node.data);
+        }
+        displayLeaf(node.left);
+        displayLeaf(node.right);
+    }
+
+    
+
     Node03 getSuccessor(Node03 del) {
         Node03 Successor = del.right;
         Node03 SuccessorParent = del;

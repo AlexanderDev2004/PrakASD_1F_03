@@ -30,6 +30,7 @@ public class BinaryTreeMain03 {
         System.out.println("");
         System.out.println("Min Value : " + bt.minValue());
         System.out.println("Min Value : " + bt.maxValue());
-
+        System.out.println("Data leaf : ");
+        bt.displayLeaf(bt.root);
     }
 }
