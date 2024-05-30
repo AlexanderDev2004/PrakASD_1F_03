@@ -59,6 +59,26 @@ public class BinaryTree03 {
         return current;
     }
 
+    public int minValue() {
+        int min = Integer.MAX_VALUE;
+        Node03 current = root;
+        while (current != null) {
+            min = Math.min(min, current.data);
+            current = current.left;
+        }
+        return min;
+    }
+
+    public int maxValue() {
+        int max = Integer.MIN_VALUE;
+        Node03 current = root;
+        while (current != null) {
+            max = Math.max(max, current.data);
+            current = current.right;
+        }
+        return max;
+    }
+
 
 
     public void inOrderRecursive(Node03 root) {
