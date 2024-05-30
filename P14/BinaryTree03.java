@@ -38,6 +38,37 @@ public class BinaryTree03 {
         }
     }
 
+
+    public void addRecursive(int data) {
+        root = addRecursive(root, data);
+    }
+
+    private Node03 addRecursive(Node03 current, int data) {
+        if (current == null) {
+            return new Node03(data);
+        }
+
+        if (data < current.data) {
+            current.left = addRecursive(current.left, data);
+        } else if (data > current.data) {
+            current.right = addRecursive(current.right, data);
+        } else {
+            return current;
+        }
+
+        return current;
+    }
+
+
+
+    public void inOrderRecursive(Node03 root) {
+        if (root != null) {
+            inOrderRecursive(root.left);
+            System.out.print(root.data + " ");
+            inOrderRecursive(root.right);
+        }
+    }
+
     public boolean find(int data) {
         boolean result = false;
         Node03 current = root;
