@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class GraphMain03 {
     public static void main(String[] args) throws Exception {
         Graph03 gedung = new Graph03(6);
-        // int attempt = 0;
-        // Scanner sc03 = new Scanner(System.in);
+        int attempt = 0;
+        Scanner sc03 = new Scanner(System.in);
         gedung.addEdge(0, 1, 50);
         gedung.addEdge(0, 2, 100);
         gedung.addEdge(1, 3, 70);
@@ -15,13 +15,13 @@ public class GraphMain03 {
         gedung.printGraph();
         gedung.removeEdge(1, 3);
         gedung.printGraph();
-        // for (int i = attempt ; i < 2; i++) {
-        //     System.out.println("Masukkan gedung asal: ");
-        //     int asal = sc03.nextInt();
-        //     System.out.println("Masukkan Gedung Tujuan: ");
-        //     int tujuan = sc03.nextInt();
-        //     gedung.Neighbours(asal, tujuan);
-        //     System.out.println("");
-        // }
+        for (int i = attempt ; i < 2; i++) {
+            System.out.println("Masukkan gedung asal: ");
+            int asal = sc03.nextInt();
+            System.out.println("Masukkan Gedung Tujuan: ");
+            int tujuan = sc03.nextInt();
+            gedung.Neighbours(asal, tujuan);
+            System.out.println("");
+        }
     }
 }
