@@ -2,7 +2,7 @@ public class DoubleLinkedList03 {
     Node03 head;
     int size;
 
-    public void DoubleLinkedList03() {
+    public DoubleLinkedList03() {
         head = null;
         size = 0;
     }
@@ -13,14 +13,15 @@ public class DoubleLinkedList03 {
 
     public void addFirst(int item, int jarak) {
         if (isEmpty()) {
-            head = new Node03(null, item, jarak,null);
+            head = new Node03(null, item, jarak, null);
         } else {
-            Node03 newNode = new Node03(null, item, jarak,head);
+            Node03 newNode = new Node03(null, item, jarak, head);
             head.prev = newNode;
             head = newNode;
         }
         size++;
     }
+
     public void addLast(int item, int jarak) {
         if (isEmpty()) {
             addFirst(item, jarak);
@@ -29,11 +30,12 @@ public class DoubleLinkedList03 {
             while (current.next != null) {
                 current = current.next;
             }
-            Node03 newNode = new Node03(current, item, jarak,null);
+            Node03 newNode = new Node03(current, item, jarak, null);
             current.next = newNode;
             size++;
         }
     }
+
     public void add(int item, int index) throws Exception {
         if (isEmpty()) {
             addFirst(item, index);
@@ -47,19 +49,18 @@ public class DoubleLinkedList03 {
                 i++;
             }
             if (current.prev == null) {
-                Node03 newNode = new Node03(null, item, index,current);
+                Node03 newNode = new Node03(null, item, index, current);
                 current.prev = newNode;
                 head = newNode;
             } else {
-                Node03 newNode = new Node03(current.prev, item, index,current);
-                newNode.prev = current.prev;
-                newNode.next = current;
-                newNode.prev.next = newNode;
-                newNode.next.prev = newNode;
+                Node03 newNode = new Node03(current.prev, item, index, current);
+                current.prev.next = newNode;
+                current.prev = newNode;
             }
+            size++;
         }
-        size++;
     }
+
     public int size() {
         return size;
     }
@@ -93,6 +94,7 @@ public class DoubleLinkedList03 {
             size--;
         }
     }
+
     public void removeLast() throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked list masih kosong, tidak dapat dihapus!");
@@ -111,20 +113,23 @@ public class DoubleLinkedList03 {
 
     public void remove(int index) {
         Node03 current = head;
-        while (current!=null) {
+        while (current != null) {
             if (current.data == index) {
                 if (current.prev == null) {
                     head = current.next;
-                    current.next.prev = null;
+                    if (head != null) {
+                        head.prev = null;
+                    }
                 } else if (current.next == null) {
                     current.prev.next = null;
                 } else {
                     current.prev.next = current.next;
                     current.next.prev = current.prev;
                 }
+                size--;
+                break;
             }
             current = current.next;
-            
         }
     }
 
