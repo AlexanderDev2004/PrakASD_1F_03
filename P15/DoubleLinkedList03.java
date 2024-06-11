@@ -109,42 +109,42 @@ public class DoubleLinkedList03 {
         size--;
     }
 
-    // public void remove(int index) {
-    //     Node03 current = head;
-    //     while (current!=null) {
-    //         if (current.data == index) {
-    //             if (current.prev == null) {
-    //                 head = current.next;
-    //                 current.next.prev = null;
-    //             } else if (current.next == null) {
-    //                 current.prev.next = null;
-    //             } else {
-    //                 current.prev.next = current.next;
-    //                 current.next.prev = current.prev;
-    //             }
-    //         }
-    //         current = current.next;
-            
-    //     }
-    // }
-
     public void remove(int index) {
         Node03 current = head;
-        while (current != null) {
+        while (current!=null) {
             if (current.data == index) {
-                if (current.prev != null) {
-                    current.prev.next = current.next;
-                } else {
+                if (current.prev == null) {
                     head = current.next;
-                }
-                if (current.next != null) {
+                    current.next.prev = null;
+                } else if (current.next == null) {
+                    current.prev.next = null;
+                } else {
+                    current.prev.next = current.next;
                     current.next.prev = current.prev;
                 }
-                break;
             }
             current = current.next;
+            
         }
     }
+
+    // public void remove(int index) {
+    //     Node03 current = head;
+    //     while (current != null) {
+    //         if (current.data == index) {
+    //             if (current.prev != null) {
+    //                 current.prev.next = current.next;
+    //             } else {
+    //                 head = current.next;
+    //             }
+    //             if (current.next != null) {
+    //                 current.next.prev = current.prev;
+    //             }
+    //             break;
+    //         }
+    //         current = current.next;
+    //     }
+    // }
 
     public int getJarak(int index) throws Exception {
         if (isEmpty() || index >= size) {
