@@ -11,8 +11,11 @@ public class GraphMatriks03 {
         matriks[asal][tujuan] = jarak;
         
     }
+    // public void removeEdge (int asal, int tujuan) {
+    //     matriks[asal][tujuan] = -1;
+    // }
     public void removeEdge (int asal, int tujuan) {
-        matriks[asal][tujuan] = -1;
+        matriks[asal][tujuan] = 0;
     }
     public void printGraph(){
         for(int i = 0; i < vertex; i++){
