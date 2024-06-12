@@ -36,9 +36,9 @@ public class DoubleLinkedList03 {
         }
     }
 
-    public void add(int item, int index) throws Exception {
+    public void add(int item, int index, int jarak) throws Exception {
         if (isEmpty()) {
-            addFirst(item, index);
+            addFirst(item, jarak);
         } else if (index < 0 || index > size) {
             throw new Exception("Nilai index di luar batas");
         } else {
@@ -49,16 +49,18 @@ public class DoubleLinkedList03 {
                 i++;
             }
             if (current.prev == null) {
-                Node03 newNode = new Node03(null, item, index, current);
+                Node03 newNode = new Node03(null, item, jarak, current);
                 current.prev = newNode;
                 head = newNode;
             } else {
-                Node03 newNode = new Node03(current.prev, item, index, current);
-                current.prev.next = newNode;
-                current.prev = newNode;
+                Node03 newNode = new Node03(current.prev, item, jarak, current);
+                newNode.prev = current.prev;
+                newNode.next = current;
+                newNode.prev.next = newNode;
+                newNode.next.prev = newNode;
             }
-            size++;
         }
+        size++;
     }
 
     public int size() {
@@ -117,8 +119,8 @@ public class DoubleLinkedList03 {
             if (current.data == index) {
                 if (current.prev == null) {
                     head = current.next;
-                    if (head != null) {
-                        head.prev = null;
+                    if (current.next != null) {
+                        current.next.prev = null;
                     }
                 } else if (current.next == null) {
                     current.prev.next = null;
@@ -127,29 +129,22 @@ public class DoubleLinkedList03 {
                     current.next.prev = current.prev;
                 }
                 size--;
-                break;
+                return;
             }
             current = current.next;
         }
     }
 
-    // public void remove(int index) {
-    //     Node03 current = head;
-    //     while (current != null) {
-    //         if (current.data == index) {
-    //             if (current.prev != null) {
-    //                 current.prev.next = current.next;
-    //             } else {
-    //                 head = current.next;
-    //             }
-    //             if (current.next != null) {
-    //                 current.next.prev = current.prev;
-    //             }
-    //             break;
-    //         }
-    //         current = current.next;
-    //     }
-    // }
+    public void updateJarak(int index, int newJarak) throws Exception {
+        if (isEmpty() || index >= size) {
+            throw new Exception("Nilai index di luar batas");
+        }
+        Node03 tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        tmp.jarak = newJarak;
+    }
 
     public int getJarak(int index) throws Exception {
         if (isEmpty() || index >= size) {

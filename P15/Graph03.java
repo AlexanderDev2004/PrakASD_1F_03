@@ -17,7 +17,7 @@ public class Graph03 {
     public void degree(int asal) throws Exception {
         int totalIn = 0, totalOut = 0;
 
-        
+        // Calculate total in-degree
         for (int i = 0; i < vertex; i++) {
             for (int j = 0; j < list[i].size(); j++) {
                 if (list[i].get(j) == asal) {
@@ -26,7 +26,7 @@ public class Graph03 {
             }
         }
 
-        
+        // Calculate total out-degree
         totalOut = list[asal].size();
 
         System.out.println("InDegree dari Gedung " + (char) (asal + 'A') + " : " + totalIn);
@@ -38,11 +38,35 @@ public class Graph03 {
         list[asal].remove(tujuan);
     }
 
+    public void updateJarak(int asal, int tujuan, int newJarak) throws Exception {
+        boolean updated = false;
+        for (int i = 0; i < list[asal].size(); i++) {
+            if (list[asal].get(i) == tujuan) {
+                list[asal].updateJarak(i, newJarak);
+                updated = true;
+                break;
+            }
+        }
+        if (updated) {
+            System.out.println("Jarak berhasil diperbarui");
+        } else {
+            System.out.println("Edge tidak ditemukan");
+        }
+    }
+
     public void removeAllEdges() {
         for (int i = 0; i < vertex; i++) {
             list[i].clear();
         }
         System.out.println("Graph berhasil dikosongkan");
+    }
+
+    public int hitungEdge() {
+        int edgeCount = 0;
+        for (int i = 0; i < vertex; i++) {
+            edgeCount += list[i].size();
+        }
+        return edgeCount;
     }
 
     public void printGraph() throws Exception {
@@ -57,7 +81,7 @@ public class Graph03 {
         }
     }
 
-    public void Neighbours(int asal, int tujuan) throws Exception {
+    public void neighbours(int asal, int tujuan) throws Exception {
         boolean isFound = false;
         for (int i = 0; i < list[asal].size(); i++) {
             if (list[asal].get(i) == tujuan) {

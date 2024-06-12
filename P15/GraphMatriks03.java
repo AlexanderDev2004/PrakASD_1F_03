@@ -28,4 +28,19 @@ public class GraphMatriks03 {
             System.out.println("");
         }
     }
+    public void deggre(int node3){
+        int InDegree = 0, OutDegree = 0;
+
+        for(int i = 0; i < vertex; i++){
+            if (matriks[node3][i] != 0) {
+                OutDegree++;
+            }
+            if (matriks[node3][i] != 0) {
+                InDegree++;
+            }
+        }
+        System.out.println("InDegree dari Gedung " + (char) ('A' + node3) + " : " + InDegree);
+        System.out.println("OutDegree dari Gedung " + (char) ('A' + node3) + " : " + OutDegree);
+        System.out.println("Degree dari Gedung " + (char) ('A' + node3 ) + " : " + (InDegree + OutDegree));
+    }
 }
